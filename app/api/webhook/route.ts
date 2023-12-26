@@ -7,7 +7,7 @@ import { stripe } from "@/lib/stripe";
 
 export async function POST(req: Request) {
   const body = await req.text();
-  const signature = headers().get("Stripe-Signature") as string;   // -- called by stripe dashboard, so we confirm it by this
+  const signature = headers().get("Stripe-Signature") as string; // -- called by stripe dashboard, so we confirm it by this
 
   let event: Stripe.Event;
 
@@ -49,7 +49,7 @@ export async function POST(req: Request) {
   }
 
   // If the user is renewing the subscription
-  if ((event.type = "invoice.payment_succeeded")) {
+  if (event.type === "invoice.payment_succeeded") {
     const subscription = await stripe.subscriptions.retrieve(
       session.subscription as string
     );
