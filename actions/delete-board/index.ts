@@ -6,6 +6,7 @@ import { auth } from "@clerk/nextjs";
 import { ACTION, ENTITY_TYPE } from "@prisma/client";
 
 import { db } from "@/lib/db";
+import { checkSubscription } from "@/lib/subscription";
 import { createSafeAction } from "@/lib/create-safe-action";
 import { createAuditLog } from "@/lib/create-audit-log";
 import { decreaseAvailableCount } from "@/lib/org-limit";
@@ -22,6 +23,8 @@ export const handler = async (data: InputType): Promise<ReturnType> => {
     };
   }
 
+  const isPro = await checkSubscription();
+
   const { id } = data;
   let board;
 
@@ -33,7 +36,9 @@ export const handler = async (data: InputType): Promise<ReturnType> => {
       },
     });
 
-    await decreaseAvailableCount();
+    if (!isPro) {
+      await decreaseAvailableCount();
+    }
 
     await createAuditLog({
       entityId: board.id,
