@@ -1,4 +1,4 @@
-# Fullstack Trello Clone: Next.js 14, Server Actions, React JS, TypeScript, Tailwind, MongoDB, Prisma, Stripe
+# Fullstack Taskify Application: Next.js 14, Server Actions, React JS, TypeScript, Tailwind, MongoDB, Prisma, Stripe
 
 Description: 
 
