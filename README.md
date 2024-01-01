@@ -6,6 +6,7 @@ Taskify is a SaaS Application. It is a visual tool that empowers a team of profe
 
 Just sign up, create a board, and you’re off!
 
+
 Key Features:
 - Authentication using Clerk
 - Designed using shadcnUI & TailwindCSS
