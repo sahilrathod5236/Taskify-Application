@@ -6,6 +6,7 @@ Taskify is a SaaS Application. It is a collaboration tool that empowers your tea
 
 Key Features:
 - Authentication using Clerk
+- Designed using shadcnUI & TailwindCSS
 - Organizations / Workspaces
 - Board creation
 - Unsplash API for random beautiful cover images
@@ -21,4 +22,3 @@ Key Features:
 - Landing page
 - Mongo DB
 - Prisma ORM
-- shadcnUI & TailwindCSS
