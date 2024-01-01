@@ -2,7 +2,9 @@
 
 Description: 
 
-Taskify is a SaaS Application. It is a visual tool that empowers a team of professionals to manage any type of project, workflow, or task tracking.Just sign up, create a board, and you’re off!
+Taskify is a SaaS Application. It is a visual tool that empowers a team of professionals to manage any type of project, workflow, or task tracking.  
+
+Just sign up, create a board, and you’re off!
 
 Key Features:
 - Authentication using Clerk
